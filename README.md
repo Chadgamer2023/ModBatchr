@@ -21,76 +21,79 @@ ModBatchr will auto-refresh to:
 Copy
 Edit
 …/file/12345-example-mod/?do=download
-Click the ModBatchr icon in your toolbar.
 
-In the popup, you’ll see a list of all downloadable files:
+3. Click the **ModBatchr** icon in your toolbar.
 
-Use Select All, Unselect All, or pick files individually
+4. In the popup, you’ll see a list of all downloadable files:
+- Use **Select All**, **Unselect All**, or pick files individually.
+- Click **Download Selected** or **Download All**.
 
-Click Download Selected or Download All
+5. Files are fetched, zipped, and saved to your chosen folder.
 
-Files are fetched, zipped, and saved to your chosen folder.
+---
 
-🔧 Features
-✅ Manual file selection
+## 🔧 Features
 
-🚀 ZIP bundling for multi-file downloads
+- ✅ **Manual file selection**
+- 🚀 **ZIP bundling** for multi-file downloads
+- 💾 **Custom subfolder paths** (e.g., `MyMods/Bundle1`)
+- 🔄 **Auto-refresh** mod pages to access download mode directly
+- 🧠 **Persistent preferences** (remembers selections and settings)
 
-💾 Set and save a custom subfolder path (e.g. MyMods/Bundle1)
+---
 
-🔄 Auto-refresh mod pages to access download mode directly
+## ⚙️ Configuration
 
-🧠 Remembers selections and preferences between sessions
-
-⚙️ Configuration
 Inside the popup:
 
-Download Folder – Choose where zipped files are stored
+- **Download Folder** – Choose where zipped files are stored.
+- **Save Folder** – Saves your custom folder preference.
+- **Auto-refresh** – Automatically appends `?do=download` to mod pages.
 
-💾 Save Folder – Saves your custom folder preference
+---
 
-🔄 Auto-refresh – Automatically appends ?do=download to mod pages
+## 📂 How It Works
 
-📂 How It Works
-When visiting a mod page, ModBatchr auto-redirects to the download view
+1. When visiting a mod page, ModBatchr auto-redirects to the download view.
+2. It extracts file names and links using DOM scraping.
+3. Selected files are fetched in parallel (with fail handling).
+4. Files are zipped in-browser using `JSZip`.
+5. The ZIP is saved using the browser's native download API.
 
-It extracts file names + links using DOM scraping
+---
 
-Selected files are fetched in parallel (with fail handling)
+## ❗ Legal Disclaimer
 
-Files are zipped in-browser using JSZip
-
-The ZIP is saved using the browser's native download API
-
-❗ Legal Disclaimer
-ModBatchr does not host or distribute any third-party files.
+ModBatchr does not host or distribute any third-party files.  
 It simply automates manual downloads already accessible via LoversLab.
 
-Please respect the LoversLab Privacy Policy and Terms of Service, and do not redistribute or commercialize downloaded content.
+- Please respect the LoversLab **Privacy Policy** and **Terms of Service**.
+- Do not redistribute or commercialize downloaded content.
+- This tool is intended for **personal use only**.
+- If any file requires registration, verification, or explicit user interaction, you must comply with LoversLab's rules.
 
-This tool is intended for personal use only.
-If any file requires registration, verification, or explicit user interaction, you must comply with LoversLab's rules.
+---
 
-🤝 Contributing
-Fork this repo
+## 🤝 Contributing
 
-Create a feature branch:
-
-bash
-Copy
-Edit
+1. Fork this repo.
+2. Create a feature branch:
+```bash
 git checkout -b feature/my-feature
-Make changes and commit them
+```
+3. Make changes and commit them.
+4. Push to your fork and open a Pull Request.
 
-Push to your fork and open a Pull Request
+---
 
+## 📈 Coming Soon
 
-📈 Coming Soon
-🧾 downloaded files
+- 🧾 downloaded files
+- 🌐 Firefox support
+- 🔔 Notifications when downloads complete (configurable)
 
-🌐 Firefox support
+---
 
-🔔 Notifications when downloads complete (configurable)
+## 📝 License
 
-📝 License
 This project is open source under the MIT License.
